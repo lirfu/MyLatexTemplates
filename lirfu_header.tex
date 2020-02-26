@@ -1,3 +1,7 @@
+%%% Made by lirfu %%%
+
+% Include in preamble using: \input{lirfu_header.tex}
+
 \usepackage{amsmath,amssymb,amsfonts}  % Definitions of the American Mathematical Society
 
 \usepackage[utf8]{inputenc}         % Use this
@@ -20,7 +24,7 @@
 \usepackage[caption=false]{subfig}
 
 % Language
-\def\engl#1{engl. \textit{#1}}		% Notation for a phrase in English.
+\def\engl#1{(engl. \textit{#1})}		% Notation for a phrase in English.
 
 % Mathematics
 \newcounter{eqnumber}									% Custom counter for equations.
@@ -45,9 +49,17 @@
 \def\todo#1{\noindent\textcolor{red}{TODO: \textit{#1}}\newline}	% TODO description line.
 \def\todoimg#1{\begin{center} \textcolor{red}{\big[ IMAGE: \textit{#1} \big]} \end{center}}				% TODO image description line.
 \def\todoeq#1{\textcolor{red}{\begin{equation}\text{\big[EQUATION: \textit{#1}\big]}\end{equation}}}	% TODO equation description line.
-\newcommand{\missing}{\colorbox{Red}{?} }							% Missing information question mark.
-\newcommand{\missingt}[1]{\colorbox{Red}{#1}}						% Missing information description.
+\definecolor{missing}{rgb}{1,0.55,0.55}
+\newcommand{\missing}{\colorbox{missing}{?} }							% Missing information question mark.
+\newcommand{\missingt}[1]{\colorbox{missing}{#1}}						% Missing information description.
 
 % Path to images.
 \graphicspath{ {Images/} }		% Path to image folder.
 
+% Change some default titles.
+%\renewcommand{\contentsname}{Sadržaj}
+%\renewcommand{\bibname}{Reference}
+
+% Change some default spacing.
+%\parindent 4mm
+%\parskip 2mm
